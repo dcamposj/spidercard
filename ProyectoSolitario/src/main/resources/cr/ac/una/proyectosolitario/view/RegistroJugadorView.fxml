@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="background4-juego" stylesheets="@../resources/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.proyectosolitario.controller.RegistroJugadorViewController">
+   <children>
+      <VBox layoutX="462.0" layoutY="167.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="457.0" prefWidth="1280.0">
+               <children>
+                  <JFXTextField fx:id="txtNombre" labelFloat="true" onAction="#onActiontxtNombre" prefHeight="67.0" prefWidth="684.0" promptText="Ingrese su nombre" styleClass="lab-opciones" />
+               </children>
+            </HBox>
+            <AnchorPane fx:id="selector" prefHeight="441.0" prefWidth="1280.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="32.0" layoutY="117.0" prefHeight="493.0" prefWidth="1180.0" spacing="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <ImageView id="img" fitHeight="254.0" fitWidth="286.0" onMouseClicked="#onMouseClicked1Palo" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../resources/iconos/1palo.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView id="img" fitHeight="311.0" fitWidth="359.0" onMouseClicked="#onMouseClicked2Palos" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/iconos/2palos.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView id="img" fitHeight="329.0" fitWidth="437.0" onMouseClicked="#onMouseClicked4Palos" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/iconos/4palos.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label id="labDificultad" text="Selecciona la dificultad">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

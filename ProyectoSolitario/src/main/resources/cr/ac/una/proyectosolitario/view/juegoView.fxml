@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXClippedPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<JFXClippedPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@../resources/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.proyectosolitario.controller.juegoViewController">
+   <children>
+      <AnchorPane id="Pane" fx:id="root" prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <StackPane alignment="TOP_CENTER" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <GridPane fx:id="contenedorColumnas">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </children>
+            </StackPane>
+            <HBox alignment="CENTER_LEFT" prefWidth="1280.0" spacing="10.0" styleClass="hbox-botones-juego" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton onAction="#onActionbtnSalir" prefHeight="84.0" prefWidth="81.0" styleClass="jfx-btn-goMain" text=" ">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton onAction="#onActionBtnGuardar" prefHeight="84.0" prefWidth="81.0" styleClass="jfx-btn-goGuardarView" text=" ">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton onAction="#onActionBtnHint" prefHeight="84.0" prefWidth="81.0" styleClass="jfx-btn-hint" text=" ">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton layoutX="192.0" layoutY="14.0" onAction="#onAxtionOpciones" prefHeight="84.0" prefWidth="81.0" styleClass="jfx-btn-opciones" text=" ">
+                     <HBox.margin>
+                        <Insets right="200.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <HBox prefHeight="62.0" prefWidth="348.0" styleClass="hbox-nombre-jugador">
+                     <children>
+                        <Label fx:id="labelNomJugador" prefHeight="39.0" prefWidth="323.0" styleClass="jfx-text-fill" text=" ">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="62.0" prefWidth="325.0" styleClass="hbox-puntuacion">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="224.0" text="Puntuacion:">
+                           <HBox.margin>
+                              <Insets left="10.0" right="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="labelPuntaje" prefHeight="39.0" prefWidth="101.0" text="500">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox fx:id="contenedorMazo" layoutX="975.0" layoutY="523.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="162.0" prefWidth="48.0" styleClass="hbox-contenedor-mazo" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="1110.0" AnchorPane.rightAnchor="50.0" />
+            <HBox fx:id="contenedorPilas" layoutX="23.0" layoutY="497.0" prefHeight="120.0" prefWidth="81.0" spacing="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="50.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="paneOpciones" fx:id="paneOpciones" stylesheets="@../resources/styles.css" visible="false">
+         <children>
+            <VBox layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="152.0" prefWidth="1280.0">
+                     <children>
+                        <Label prefHeight="59.0" prefWidth="352.0" styleClass="lab-opciones" text="Opciones">
+                           <graphic>
+                              <ImageView fitHeight="84.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/iconos/settings.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" prefHeight="463.0" prefWidth="1080.0" styleClass="vbox-opciones">
+                     <children>
+                        <HBox prefHeight="490.0" prefWidth="880.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="463.0" prefWidth="169.0" spacing="195.0">
+                                 <children>
+                                    <Label prefHeight="34.0" prefWidth="187.0" styleClass="jfx-text-fill" text="Diseño" />
+                                    <Label styleClass="jfx-text-fill" text="Fondo" />
+                                 </children>
+                                 <padding>
+                                    <Insets top="75.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="463.0" prefWidth="750.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="222.0" prefWidth="731.0" spacing="75.0">
+                                       <children>
+                                          <JFXButton fx:id="btnCartas1" onAction="#onActionCartas1" prefHeight="128.0" prefWidth="81.0" styleClass="marco-cartas1" text=" " />
+                                          <JFXButton fx:id="btnCartas2" onAction="#onActionCartas2" prefHeight="128.0" prefWidth="81.0" styleClass="jfx-btn-cartas2" text=" " />
+                                          <JFXButton onAction="#onActionImportarDiseño" prefHeight="36.0" prefWidth="246.0" styleClass="jfx-text-fill" text="Personalizado" />
+                                       </children>
+                                       <padding>
+                                          <Insets left="100.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="270.0" prefWidth="731.0" spacing="20.0">
+                                       <children>
+                                          <JFXButton fx:id="btnBackground1" onAction="#onActionbtnBackground1" prefHeight="85.0" prefWidth="156.0" styleClass="jfx-btn-background1" text=" " />
+                                          <JFXButton fx:id="btnBackground2" layoutX="340.0" layoutY="77.0" onAction="#onActionbtnBackground2" prefHeight="85.0" prefWidth="156.0" styleClass="jfx-btn-background2" text=" " />
+                                          <JFXButton fx:id="btnBackground3" layoutX="295.0" layoutY="77.0" onAction="#onActionbtnBackground3" prefHeight="85.0" prefWidth="156.0" styleClass="jfx-btn-background3" text=" " />
+                                          <JFXButton fx:id="btnBackground4" onAction="#onActionbtnBackground4" prefHeight="85.0" prefWidth="156.0" styleClass="jfx-btn-background4-marco" text=" " />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="200.0" right="200.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                     <children>
+                        <JFXButton onAction="#onActionAceptar" prefHeight="55.0" prefWidth="213.0" styleClass="jfx-btn-aceptar" text="Aceptar" />
+                        <JFXButton onAction="#onActionCancelar" prefHeight="55.0" prefWidth="213.0" styleClass="jfx-btn-cancelar" text="Cancelar" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneWin" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <StackPane layoutX="315.0" layoutY="218.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="150.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="282.0" fitWidth="757.0" onMouseClicked="#onMouseClickPaneWinSalir" pickOnBounds="true" preserveRatio="true" styleClass="hbox-contenedor-mazo-contenedores">
+                           <image>
+                              <Image url="@../resources/iconos/congratulations.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="jfx-text-fill" text="Click para continuar" />
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</JFXClippedPane>

@@ -1,0 +1,343 @@
+
+*{
+    -fx-font-family: "Gretoon";
+}
+
+.background1-juego{
+    -fx-background-image:url(../resources/backgrounds/background1.jpg);
+}
+
+.background2-juego{
+    -fx-background-image:url(../resources/backgrounds/background2.jpg);
+}
+
+.background3-juego{
+    -fx-background-image:url(../resources/backgrounds/background3.jpg);
+}
+
+.background4-juego{
+    -fx-background-image:url(../resources/backgrounds/background6.jpg);
+}
+
+#root{
+    -fx-background-image:url(../resources/backgrounds/Main.jpg);
+}
+
+#paneOpciones{
+    -fx-background-image:url(../resources/backgrounds/background4.png);
+}
+
+.jfx-btn-background1,.jfx-btn-background2,.jfx-btn-background3,.jfx-btn-background4{
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+    -fx-background-size:contain;
+}
+.jfx-btn-background1-marco,.jfx-btn-background2-marco,.jfx-btn-background3-marco,.jfx-btn-background4-marco{
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+    -fx-background-size:contain;
+    -fx-border-color: #0066ff;
+    -fx-border-width:5;
+}
+
+.jfx-btn-background1,.jfx-btn-background1-marco{-fx-background-image: url("../resources/backgrounds/background1.jpg");}
+.jfx-btn-background2,.jfx-btn-background2-marco{-fx-background-image: url("../resources/backgrounds/background2.jpg");}
+.jfx-btn-background3,.jfx-btn-background3-marco{-fx-background-image: url("../resources/backgrounds/background3.jpg");}
+.jfx-btn-background4,.jfx-btn-background4-marco{-fx-background-image: url("../resources/backgrounds/background6.jpg");}
+
+.jfx-btn-background1:hover,.jfx-btn-background2:hover,.jfx-btn-background3:hover,.jfx-btn-background4:hover{
+    -fx-cursor:hand;
+}
+.jfx-btn-cartas1{
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+    -fx-background-size:contain;
+    -fx-background-image : url("cartas1/1e.jpg");
+}
+
+.marco-cartas1{
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+    -fx-background-size:contain;
+    -fx-background-image : url("cartas1/1e.jpg");
+    -fx-border-color: #0066ff;
+    -fx-border-width:5;
+}
+
+.jfx-btn-cartas2{
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+    -fx-background-size:contain;
+    -fx-background-image : url("cartas2/1e.jpg");
+}
+
+.marco-cartas2{
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+    -fx-background-size:contain;
+    -fx-background-image : url("cartas2/1e.jpg");
+    -fx-border-color:#0066ff;
+    -fx-border-width:5;
+}
+
+.jfx-btn-cartas1:hover,.jfx-btn-cartas2:hover{
+    -fx-cursor:hand;
+}
+
+.hbox-botones-juego{
+    -fx-background-color:#1d1b1b;
+    -fx-opacity: 0.8;
+}
+
+.vbox-opciones{
+    -fx-background-radius:20;
+    -fx-background-color:#1d1b1b;
+    -fx-opacity: 0.8;  
+}
+
+.hbox-puntuacion{
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 8 0, 0 0 6 0, 0 0 9 0;
+    -fx-background-radius: 8;
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #f4dc00 0% , #86910e 100%),
+        #bacb08,
+        #bacb08,
+        radial-gradient(center 50% 50%, radius 100%, #f4dc00, #86910e);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-size: 18;
+    -fx-fill: white;
+    -fx-effect: dropshadow( gaussian , #0e0f08 , 0,0,0,2 );
+}
+.hbox-nombre-jugador{
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 8 0, 0 0 6 0, 0 0 9 0;
+    -fx-background-radius: 8;
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #0033ff 0% , #000066 100%),
+        #003366,
+        #003366,
+        radial-gradient(center 50% 50%, radius 100%, #0033ff, #000066);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-size: 18;
+    -fx-fill: white;
+    -fx-effect: dropshadow( gaussian , #0e0f08 , 0,0,0,2 );
+}
+
+.label{
+    -fx-text-fill:#1d1b1b;
+    -fx-font-size: 25px;
+}
+
+#labDificultad{
+    -fx-text-fill:#ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 40px;
+}
+
+.hbox-contenedor-mazo{
+    -fx-spacing: -120;
+}
+
+.hbox-contenedor-mazo-contenedores:hover {
+    -fx-cursor:hand;
+}
+.cartas-repartidas:hover{
+    -fx-cursor:hand;
+    -fx-effect: dropshadow(three-pass-box,#66ff66, 3.5, 1, 0, 0);
+}
+.cartas-repartidas-bloqueadas:pressed{
+    -fx-effect: dropshadow(three-pass-box,#ff0000, 3.5, 1, 0, 0);
+}
+.pilas-llenas{
+    -fx-effect: dropshadow(three-pass-box,#ffff00, 25, 0, 0, 0);
+}
+
+#img:hover {
+    -fx-cursor:hand;
+    -fx-effect: dropshadow(three-pass-box,chartreuse, 5, 1, 0, 0);
+}
+
+.jfx-button:hover{
+    -fx-cursor:hand;
+    -fx-background-color:#00cccc;
+}
+
+.jfx-btn-aceptar{
+
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left;
+    -fx-background-color: #33ccff;
+    -fx-font-size: 18;
+    -fx-font-weight:bold;
+    -fx-background-size: 70;
+}
+
+.jfx-btn-cancelar{
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left;
+    -fx-background-color:#fa9600;
+    -fx-font-size: 18;
+    -fx-font-weight:bold;
+    -fx-background-size: 70;
+}
+
+.jfx-btn-goMain{
+
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+    -fx-background-size:contain;
+    -fx-background-size:74;
+    -fx-background-image : url("iconos/Salir.png");
+}
+
+.jfx-btn-goGuardarView{
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+    -fx-background-size:contain;
+    -fx-background-image : url("iconos/save_all.png");
+}
+
+.jfx-btn-hint{
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+    -fx-background-size:contain;
+    -fx-background-image : url("iconos/Pista.png");
+}
+
+.jfx-btn-opciones{
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+    -fx-background-size:contain;
+    -fx-background-size:65;
+    -fx-background-image : url("iconos/settings.png");
+}
+
+.jfx-text-fill{
+    -fx-font-size:22;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -jfx-unfocus-color:#fffbf6;
+    -jfx-focus-color:#fffbf6;
+    -fx-prompt-text-fill:#fffbf6;
+    -fx-text-fill:#fffbf6;
+}
+
+.lab-opciones{
+    -fx-font-size:45;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -jfx-unfocus-color:#fffbf6;
+    -jfx-focus-color:#fffbf6;
+    -fx-prompt-text-fill:#fffbf6;
+    -fx-text-fill:#fffbf6;
+}
+
+.jfx-btn-iniciar,.jfx-btn-puntuaciones,.jfx-btn-instrucciones{
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 8 0, 0 0 6 0, 0 0 9 0;
+    -fx-background-radius: 8;
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #dbd5d5 0% , #afa5a5 100%),
+        #d4d3d3,
+        #ebe7e7,
+        radial-gradient(center 50% 50%, radius 100%, #ebe7e7, #a6a4a4);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-size: 18;
+    -fx-fill: white;
+    -fx-effect: dropshadow( gaussian , #474646 , 0,0,0,2 );
+}
+
+.jfx-btn-iniciar:hover,.jfx-btn-puntuaciones:hover,.jfx-btn-instrucciones:hover{
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
+}
+.jfx-btn-iniciar:pressed,.jfx-btn-puntuaciones:pressed,.jfx-btn-instrucciones:pressed{
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+.table-view{
+    -fx-padding: 0.5em 0.5em 0.1em 0.3em;
+    -fx-border-color: -fx-box-border -fx-box-border transparent transparent;    
+    -fx-border-insets: 0;
+    -fx-font-size:20;
+}
+
+.table-cell{
+    -fx-alignment:CENTER;
+    -fx-text-fill:#000066;
+}
+
+.table-cell:hover {
+    -fx-background-color: #9900ff;
+    -fx-text-fill:#ffffff;
+}
+
+.table-row-cell:empty, .table-cell:empty:hover {
+    -fx-background-color: whitesmoke;
+}
+
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+
+.table-view:row-selection .table-row-cell:filled:hover { 
+    -fx-background-color: rgba(28, 183, 236, 0.25);
+}
+
+.table-view:row-selection .table-row-cell:filled:selected:hover { 
+    -fx-background-color: rgba(228, 183, 236, 0.90);
+}
+
+.table-view:row-selection .table-row-cell:filled:selected { 
+    -fx-background-color: rgba(28, 183, 236, 0.65);
+}
+
+.table-view, .table-view:focused {
+    -fx-background-color: transparent,-fx-box-border,-fx-control-inner-background;
+    -fx-background-insets: -1.4, 0, 1;
+    -fx-background-radius: 1.4, 0, 0;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill:#000000;
+    -fx-alignment: top-center;
+}
+
+.table-view .column-header:hover {
+    -fx-background-color: whitesmoke;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-paddings: 10 15 15 15;
+    -fx-background-color: white;    
+    -fx-size: 45;
+    -fx-border-color: -fx-box-border;
+    -fx-border-width: 0 1 3 0;
+    -fx-border-insets: 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .show-hide-columns-button {
+    -fx-background-color: white;
+    -fx-border-color: -fx-box-border;
+    -fx-border-insets: 0;
+}
+
